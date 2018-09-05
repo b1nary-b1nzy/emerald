@@ -20,6 +20,6 @@ async def on_ready():
   print(client.user.id)
   while True:
     await client.change_presence(activity=discord.Game(type=discord.ActivityType.listening, name='for e.help!'))
-    await client.change_presence(activity=discord.Game(type=discord.ActivityType.listening, name=f'to {len(bot.guilds)} guilds!'))
+    await client.change_presence(activity=discord.Game(type=discord.ActivityType.listening, name=f'to {len(client.guilds)} guilds!'))
     
 client.run(os.environ['TOKEN'])
