@@ -59,7 +59,7 @@ class Information:
     embed = discord.Embed(color=color, title="Kala Bot Statistics")
     embed.description = "Emerald Stats"
     embed.add_field(name=f"Creator", value='BloodyPikachu#7452')
-    embed.add_field(name=f"Servers", value=f"{len(self.bot.guilds)}")
+    embed.add_field(name=f"Servers", value=f"{len(self.client.guilds)}")
     embed.add_field(name=f'Users', value=member)
     embed.add_field(name=f'Ping', value=f'{self.client.latency * 100:.4f} ms')
     embed.add_field(name=f'Version', value='0.0.1 Alpha')
