@@ -48,5 +48,24 @@ class Information:
     em.set_thumbnail(url=avi or None)
     await ctx.send(embed=em)
 
+	@commands.command()
+	async def stats(self, ctx):
+		"""Get some stats for Emerald"""
+		member = 0
+		for i in self.client.guilds:
+			for x in i.members:
+				member += 1
+		color = discord.Color(value=0xe212d1)
+    embed = discord.Embed(color=color, title="Kala Bot Statistics")
+    embed.description = "Emerald Stats"
+    embed.add_field(name=f"Creator", value=f'BloodyPikachu#7452')
+    embed.add_field(name=f"Servers", value=f"{len(self.bot.guilds)}")
+    embed.add_field(name=f'Users', value=member)
+    embed.add_field(name=f'Ping', value=f'{self.client.latency * 100:.4f} ms')
+    embed.add_field(name=f'Version', value='0.0.1 Alpha')
+    embed.add_field(name=f'Start Date', value="9/4/18")
+    embed.add_field(name=f'Coding Language', value=f'Python, discord.py rewrite')
+		await ctx.send(embed=embed)
+
 def setup(client):
   client.add_cog(Information(client))
