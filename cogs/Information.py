@@ -21,7 +21,7 @@ class Information:
     guild = ctx.message.guild
     roles = sorted(user.roles, key=lambda r: r.position)
     rolenames = ', '.join([r.name for r in roles if r != '@everyone']) or 'None'
-    shared = sum(1 for m in self.bot.get_all_members() if m.id == user.id)
+    shared = sum(1 for m in self.client.get_all_members() if m.id == user.id)
     highrole = user.top_role.name
     if highrole == "@everyone":
       role = "N/A"
