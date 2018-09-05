@@ -56,7 +56,7 @@ class Information:
       for x in i.members:
         member += 1
     color = discord.Color(value=0xe212d1)
-    embed = discord.Embed(color=color, title="Kala Bot Statistics")
+    embed = discord.Embed(color=color, title="Emerald Bot Statistics")
     embed.description = "Emerald Stats"
     embed.add_field(name=f"Creator", value='BloodyPikachu#7452')
     embed.add_field(name=f"Servers", value=f"{len(self.client.guilds)}")
