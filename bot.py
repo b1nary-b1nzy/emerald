@@ -5,6 +5,7 @@ import json
 import random
 import os
 import io
+import asyncio
 
 client = commands.Bot(command_prefix='e.', owner_id=437150834888015872)
 client.session = aiohttp.ClientSession()
@@ -20,6 +21,8 @@ async def on_ready():
   print(client.user.id)
   while True:
     await client.change_presence(activity=discord.Game(type=discord.ActivityType.listening, name='for e.help!'))
+    await asyncio.sleep(10)
     await client.change_presence(activity=discord.Game(type=discord.ActivityType.listening, name=f'to {len(client.guilds)} guilds!'))
+    await asyncio.sleep(10)
     
 client.run(os.environ['TOKEN'])
