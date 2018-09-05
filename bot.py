@@ -10,6 +10,7 @@ import asyncio
 client = commands.Bot(command_prefix='e.', owner_id=437150834888015872)
 client.session = aiohttp.ClientSession()
 client.commands_run = 0
+client.load_extension('cogs.Information')
 if 'TOKEN' in os.environ:
   heroku = True
   TOKEN = os.environ['TOKEN']
