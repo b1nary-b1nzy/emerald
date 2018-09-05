@@ -48,14 +48,14 @@ class Information:
     em.set_thumbnail(url=avi or None)
     await ctx.send(embed=em)
 
-	@commands.command()
-	async def stats(self, ctx):
-		"""Get some stats for Emerald"""
-		member = 0
-		for i in self.client.guilds:
-			for x in i.members:
-				member += 1
-		color = discord.Color(value=0xe212d1)
+  @commands.command()
+  async def stats(self, ctx):
+    """Get some stats for Emerald"""
+    member = 0
+    for i in self.client.guilds:
+      for x in i.members:
+	member += 1
+    color = discord.Color(value=0xe212d1)
     embed = discord.Embed(color=color, title="Kala Bot Statistics")
     embed.description = "Emerald Stats"
     embed.add_field(name=f"Creator", value='BloodyPikachu#7452')
