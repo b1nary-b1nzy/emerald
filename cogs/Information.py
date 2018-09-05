@@ -65,7 +65,7 @@ class Information:
     embed.add_field(name=f'Version', value='0.0.1 Alpha')
     embed.add_field(name=f'Start Date', value="9/4/18")
     embed.add_field(name=f'Coding Language', value=f'Python, discord.py rewrite')
-		await ctx.send(embed=embed)
+    await ctx.send(embed=embed)
 
 def setup(client):
   client.add_cog(Information(client))
